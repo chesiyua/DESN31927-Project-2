@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sheridan Halloween Event Sign-Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sheridan Halloween Event Sign-Up</h1>
+    <p>Sign up for the Sheridan College Halloween event and choose one activity. The organizer collects this list to plan headcount, materials and food.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Sign up</h2>
+
+      <form id="signup-form" novalidate>
+        <input type="hidden" id="editing-id" value="" />
+
+        <fieldset>
+          <legend>About You</legend>
+
+          <div class="field">
+            <label for="name">Name *</label>
+            <input id="name" name="name" type="text" required maxlength="80" autocomplete="off" />
+            <small class="field-error" data-error-for="name" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" autocomplete="off" />
+            <small class="field-error" data-error-for="email" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" maxlength="20" placeholder="Optional — e.g. 905-555-0100" autocomplete="off" />
+            <small class="field-error" data-error-for="phone" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="campus">Campus *</label>
+            <select id="campus" name="campus" required>
+              <option value="">Choose your campus…</option>
+              <option>Davis</option>
+              <option>Trafalgar</option>
+              <option>Hazel McCallion</option>
+            </select>
+            <small class="field-error" data-error-for="campus" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="attendee_type">I am a *</label>
+            <select id="attendee_type" name="attendee_type" required>
+              <option value="">Choose one…</option>
+              <option>Student</option>
+              <option>Staff</option>
+              <option>Guest</option>
+            </select>
+            <small class="field-error" data-error-for="attendee_type" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="how_heard">How did you hear about this event? *</label>
+            <select id="how_heard" name="how_heard" required>
+              <option value="">Choose one…</option>
+              <option>Friend or Classmate</option>
+              <option>Teacher or Class Announcement</option>
+              <option>Poster on Campus</option>
+              <option>Instagram or Social Media</option>
+              <option>Email</option>
+              <option>Other</option>
+            </select>
+            <small class="field-error" data-error-for="how_heard" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="attended_before">Have you been to a Sheridan Halloween event before? *</label>
+            <select id="attended_before" name="attended_before" required>
+              <option value="">Choose one…</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+            <small class="field-error" data-error-for="attended_before" aria-live="polite"></small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Event Plan</legend>
+
+          <div class="field">
+            <label for="activity">Activity *</label>
+            <select id="activity" name="activity" required>
+              <option value="">Choose one activity…</option>
+              <option>Costume Contest</option>
+              <option>Pumpkin Carving</option>
+              <option>Horror Movie Night</option>
+              <option>Haunted House Tour</option>
+            </select>
+            <small class="field-error" data-error-for="activity" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="arrival_time">Arrival time *</label>
+            <select id="arrival_time" name="arrival_time" required>
+              <option value="">Choose an arrival time…</option>
+              <option>6:00 PM</option>
+              <option>7:00 PM</option>
+              <option>8:00 PM</option>
+            </select>
+            <small class="field-error" data-error-for="arrival_time" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="guests">Number of people (including you) *</label>
+            <input id="guests" name="guests" type="number" required min="1" max="4" step="1" value="1" />
+            <small class="field-error" data-error-for="guests" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="costume_theme">Costume theme (optional)</label>
+            <select id="costume_theme" name="costume_theme">
+              <option value="">Choose a theme…</option>
+              <option>Scary</option>
+              <option>Movie or Anime Character</option>
+              <option>Funny</option>
+              <option>Cute</option>
+              <option>Original Design</option>
+              <option>No Costume</option>
+            </select>
+            <small class="field-error" data-error-for="costume_theme" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="costume">Costume plan (optional)</label>
+            <textarea id="costume" name="costume" maxlength="200" rows="3" placeholder="Optional — e.g. vampire costume"></textarea>
+            <small class="field-error" data-error-for="costume" aria-live="polite"></small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Food, Help and Ideas</legend>
+
+          <div class="field">
+            <label for="food_needs">Food needs</label>
+            <select id="food_needs" name="food_needs">
+              <option selected>None</option>
+              <option>Vegetarian</option>
+              <option>Halal</option>
+              <option>Nut Allergy</option>
+              <option>Other</option>
+            </select>
+            <small class="field-error" data-error-for="food_needs" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="candy_preference">Candy preference (optional)</label>
+            <select id="candy_preference" name="candy_preference">
+              <option value="">Choose one…</option>
+              <option>Chocolate</option>
+              <option>Gummy Candy</option>
+              <option>Sour Candy</option>
+              <option>Chips</option>
+              <option>Cookies</option>
+              <option>No Preference</option>
+            </select>
+            <small class="field-error" data-error-for="candy_preference" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="volunteer">Would you like to volunteer? (optional)</label>
+            <select id="volunteer" name="volunteer">
+              <option selected>No</option>
+              <option>Yes - Setup Before the Event</option>
+              <option>Yes - During the Event</option>
+            </select>
+            <small class="field-error" data-error-for="volunteer" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="accessibility_needs">Accessibility needs (optional)</label>
+            <input id="accessibility_needs" name="accessibility_needs" type="text" maxlength="200" placeholder="Optional — anything the organizer should prepare" autocomplete="off" />
+            <small class="field-error" data-error-for="accessibility_needs" aria-live="polite"></small>
+          </div>
+
+          <div class="field">
+            <label for="suggestions">Ideas or suggestions for the event (optional)</label>
+            <textarea id="suggestions" name="suggestions" maxlength="500" rows="4" placeholder="Optional — tell the organizer your ideas"></textarea>
+            <small class="field-error" data-error-for="suggestions" aria-live="polite"></small>
+          </div>
+
+          <div class="field field-checkbox">
+            <label for="photo_permission">
+              <input id="photo_permission" name="photo_permission" type="checkbox" />
+              I agree that photos of me at the event may be used in Sheridan posts
+            </label>
+            <small class="field-error" data-error-for="photo_permission" aria-live="polite"></small>
+          </div>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" id="submit-btn">Sign up</button>
+          <button type="button" id="cancel-edit-btn" hidden>Cancel edit</button>
+        </div>
+        <p id="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section aria-labelledby="list-heading">
+      <h2 id="list-heading">Who is coming</h2>
+      <p id="totals-line"></p>
+      <p id="empty-message">No sign-ups yet. Be the first to sign up above.</p>
+      <ul id="signup-list"></ul>
+    </section>
+  </main>
+
+  <!-- Structure of one sign-up item. Filled with textContent in app.js — never innerHTML with user data. -->
+  <template id="signup-template">
+    <li class="signup-item">
+      <div class="signup-main">
+        <h3 class="item-name"></h3>
+        <p class="item-meta"></p>
+        <p class="item-detail"></p>
+        <p class="item-extra"></p>
+        <p class="item-contact"></p>
+      </div>
+      <div class="item-actions">
+        <button type="button" class="edit-btn">Edit</button>
+        <button type="button" class="delete-btn">Delete</button>
+      </div>
+    </li>
+  </template>
+
+  <footer>
+    <p>DESN31927 Project 2 — Persistent Data. Test data is fictional. No login: anyone with the link can view and change the sign-up list.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
